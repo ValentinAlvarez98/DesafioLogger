@@ -79,7 +79,7 @@ export class UsersRepository {
 
             const payloadToDelete = new DeleteUserDTO(payload);
 
-            return await this.dao.deleteOne(payloadToDelete);
+            return await this.dao.deleteOne(payloadToDelete, payloadToDelete.email);
 
       };
 

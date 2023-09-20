@@ -23,9 +23,15 @@ export class GetUserDTO {
 
             };
 
-            if (!validEmail(payload.email)) errors.push("Se requiere un email valido");
 
-            this.email = payload.email ? payload.email : '';
+            if (payload.email !== undefined) {
+                  if (!validEmail(payload.email)) errors.push("Se requiere un email valido");
+
+            } else {
+                  if (!validEmail(payload)) errors.push("Se requiere un email valido");
+            }
+
+            this.email = payload.email ? payload.email : payload;
             this.id = payload.id ? payload.id : '';
             this.password = payload.password ? payload.password : '';
             errors.length > 0 ? this.errors = errors : null;

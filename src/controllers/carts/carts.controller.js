@@ -20,7 +20,15 @@ export class CartsController {
 
         } catch (error) {
 
-            next(error);
+            let errorAt = error.stack ? error.stack.split('\n    at ')[1] : '';
+
+            req.logger.error({
+                message: error.message,
+                method: req.method,
+                url: req.originalUrl,
+                date: new Date().toLocaleDateString(),
+                At: errorAt
+            });
 
         };
 
@@ -42,7 +50,15 @@ export class CartsController {
 
         } catch (error) {
 
-            next(error);
+            let errorAt = error.stack ? error.stack.split('\n    at ')[1] : '';
+
+            req.logger.error({
+                message: error.message,
+                method: req.method,
+                url: req.originalUrl,
+                date: new Date().toLocaleDateString(),
+                At: errorAt
+            });
 
         };
 
@@ -58,7 +74,15 @@ export class CartsController {
 
         } catch (error) {
 
-            next(error);
+            let errorAt = error.stack ? error.stack.split('\n    at ')[1] : '';
+
+            req.logger.error({
+                message: error.message,
+                method: req.method,
+                url: req.originalUrl,
+                date: new Date().toLocaleDateString(),
+                At: errorAt
+            });
 
         };
 
@@ -80,7 +104,15 @@ export class CartsController {
 
         } catch (error) {
 
-            next(error);
+            let errorAt = error.stack ? error.stack.split('\n    at ')[1] : '';
+
+            req.logger.error({
+                message: error.message,
+                method: req.method,
+                url: req.originalUrl,
+                date: new Date().toLocaleDateString(),
+                At: errorAt
+            });
 
         };
 
@@ -100,7 +132,15 @@ export class CartsController {
 
         } catch (error) {
 
-            next(error);
+            let errorAt = error.stack ? error.stack.split('\n    at ')[1] : '';
+
+            req.logger.error({
+                message: error.message,
+                method: req.method,
+                url: req.originalUrl,
+                date: new Date().toLocaleDateString(),
+                At: errorAt
+            });
 
         };
 
@@ -121,7 +161,15 @@ export class CartsController {
 
         } catch (error) {
 
-            next(error);
+            let errorAt = error.stack ? error.stack.split('\n    at ')[1] : '';
+
+            req.logger.error({
+                message: error.message,
+                method: req.method,
+                url: req.originalUrl,
+                date: new Date().toLocaleDateString(),
+                At: errorAt
+            });
 
         };
 

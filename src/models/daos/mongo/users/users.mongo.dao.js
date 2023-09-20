@@ -45,10 +45,14 @@ export class UsersMongoDAO {
 
       };
 
-      async deleteOne(payload) {
+      async deleteOne(payload, email) {
 
             return await usersModel.findOneAndDelete(
-                  payload.email
+                  payload.email ? {
+                        email: payload.email
+                  } : {
+                        email: email
+                  }
             );
 
       };
